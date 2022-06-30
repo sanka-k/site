@@ -1,0 +1,297 @@
+<@charset "UTF-8";>
+
+           body{ 
+              padding-top: 56px; 
+              font-family: 'Noto Sans JP', sans-serif;
+          }
+          a.anchor {
+              display: block;
+              padding-top: 70px;
+              margin-top: -70px;
+          }
+          .media:hover {
+              opacity: 0.5;
+              width: 100%;
+              height: auto;
+              transition: .2s ease;
+              backface-visibility: hidden;
+              background-color: white;
+          } 
+
+/*h2などここから*/
+h2 {
+    font-family: WebLTGothicFont;
+    border: none;
+    position: relative;
+    padding: .5em 1em;
+    background-color: #f7f6fb;/*付箋の色*/
+    border-left: 20px solid #408fe9/*左端のポイント色*/
+}
+
+h3 {
+    font-family: WebLTGothicFont;
+    border: none;
+    position: relative;
+    padding: .5em 1em;
+    background-color: #f7f6fb;/*付箋の色*/
+    border-left: 20px solid #408fe9;/*左端のポイント色*/
+}
+/*h2などここまで*/
+
+
+/* プロフィールユニット */
+.original-profile--right {
+  text-align: right;
+}
+
+.original-profile__inner {
+  width: 100%;
+}
+
+.original-profile__img {
+  width: 50%;
+  padding: 4px;
+  border: 1px solid #cccccc;
+  text-align: center;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.original-profile__text a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.original-profile__text p:not(:first-child) {
+  margin-top: 15px;
+}
+
+.original-profile__text p {
+  margin-bottom: 15px;
+  font-size: 12px;
+  line-height: 25px;
+}
+
+.original-profile__link {
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 2;
+  color: #337ab7;
+}
+
+
+/*プロフィールユニットここまで*/
+
+/*引用ここから*/
+blockquote {
+    position: relative;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    font-style: italic;
+    color: #464646;
+    border: solid 3px #72ccf4;
+}
+
+blockquote:before{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 0 0 30px;
+    content: "\f10d";
+    font-family: FontAwesome;
+    background: #72ccf4;
+    color: #FFF;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 900;
+}
+
+blockquote p {
+    position: relative;
+    padding: 0;
+    margin: 10px 0;
+    z-index: 3;
+    line-height: 1.7;
+}
+
+blockquote cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.9em;
+}
+/*引用ここまで*/
+
+/*--------------------
+ オリジナルのフレーム
+--------------------*/
+.frame {
+ width: 80%;
+ margin: 30px auto 20px;
+ padding: 30px 20px 0;
+ border: 3px solid #aaa;
+ position: relative;
+ border-radius: 3px;
+ background-color: #fff;
+}
+.frame-title {
+ position: absolute;
+ top: -13px;
+ left: 20px;
+ padding: 0 5px;
+ background-color: #fff;
+}
+.frame-title .fa {
+ margin-right: 5px;
+}
+.caution {
+ background-color: #ff4500;
+ border: 2px solid #ff4500;
+ color: #fff;
+ border-radius: 3px;
+}
+.frame-red {
+ border-color: #ff4500;
+}
+
+
+/*--------------------
+ 吹き出しを作る
+--------------------*/
+.balloon {
+margin-bottom: 2em;
+position: relative;
+}
+.balloon:before,.balloon:after {
+clear: both;
+content: "";
+display: block;
+}
+.balloon figure {
+width: 60px;
+height: 60px;
+}
+.balloon-image-left {
+float: left;
+margin-right: 20px;
+}
+.balloon-image-right {
+float: right;
+margin-left: 20px;
+}
+.balloon figure img {
+width: 100%;
+height: 100%;
+border: 1px solid #aaa;
+border-radius: 50%;
+margin: 0;
+}
+.balloon-image-description {
+padding: 5px 0 0;
+font-size: 10px;
+text-align: center;
+}
+.balloon-text-right,.balloon-text-left {
+position: relative;
+padding: 10px;
+border: 1px solid;
+border-radius: 10px;
+max-width: -webkit-calc(100% - 120px);
+max-width: calc(100% - 120px);
+display: inline-block;
+}
+.balloon-text-right {
+border-color: #aaa;
+}
+.balloon-text-left {
+border-color: #aaa;
+}
+.balloon-text-right {
+float: left;
+}
+.balloon-text-left {
+float: right;
+}
+.balloon p {
+margin: 0 0 20px;
+}
+.balloon p:last-child {
+margin-bottom: 0;
+}
+/* 三角部分 */
+.balloon-text-right:before {
+position: absolute;
+content: '';
+border: 10px solid transparent;
+border-right: 10px solid #aaa;
+top: 15px;
+left: -20px;
+}
+.balloon-text-right:after {
+position: absolute;
+content: '';
+border: 10px solid transparent;
+border-right: 10px solid #fff;
+top: 15px;
+left: -19px;
+}
+.balloon-text-left:before {
+position: absolute;
+content: '';
+border: 10px solid transparent;
+border-left: 10px solid #aaa;
+top: 15px;
+right: -20px;
+}
+.balloon-text-left:after {
+position: absolute;
+content: '';
+border: 10px solid transparent;
+border-left: 10px solid #fff;
+top: 15px;
+right: -19px;
+}
+/*--------------------
+ 吹き出しここまで
+--------------------*/
+
+/* 考え毎 */
+.think .balloon-text-right,.think .balloon-text-left {
+ border-radius: 30px;
+}
+.think .balloon-text-right:before {
+ border: 1px solid #aaa;
+ border-radius: 50%;
+ width: 8px;
+ height: 8px;
+ top: 15px;
+ left: -12px;
+}
+.think .balloon-text-right:after {
+ border: 1px solid #aaa;
+ border-radius: 50%;
+ width: 4px;
+ height: 4px;
+ top: 20px;
+ left: -19px;
+}
+.think .balloon-text-left:before {
+ border: 1px solid #aaa;
+ border-radius: 50%;
+ width: 8px;
+ height: 8px;
+ top: 15px;
+ right: -12px;
+}
+.think .balloon-text-left:after {
+ border: 1px solid #aaa;
+ border-radius: 50%;
+ width: 4px;
+ height: 4px;
+ top: 20px;
+ right: -19px;
+}
